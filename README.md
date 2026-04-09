@@ -10,4 +10,4 @@ Lift-Please is a sample pickup-and-drop booking platform built as a production-s
 - GitLab CI/CD for application deployment
 - Helm-based Kubernetes delivery
 - Observability with CloudWatch
->>>>>>> 99a126b (Add full project structure)
+
