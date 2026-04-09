@@ -1,0 +1,16 @@
+{
+  "name": "lift-please",
+  "version": "1.0.0",
+  "description": "Lift-Please pickup and drop booking API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node --test",
+    "lint": "node --check src/app.js && node --check src/server.js && node --check src/routes/rides.js && node --check src/data/ridesStore.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {}
+}
