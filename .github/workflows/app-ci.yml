@@ -46,10 +46,12 @@ jobs:
       - name: Unit tests
         run: npm test || echo "No tests"
 
-      - name: Start app
+      - name: Start app for integration test
         run: |
-          npm start > app.log 2>&1 &
-          echo $! > app.pid
+          npm start &
+          APP_PID=$!
+          echo $APP_PID > app.pid
+          sleep 2
 
       - name: Wait for app
         run: |
