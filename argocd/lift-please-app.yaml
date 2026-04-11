@@ -7,7 +7,7 @@ spec:
   project: default
   
   source:
-    repoURL: https://github.com/YOUR_USERNAME/lift-please.git
+    repoURL: https://github.com/Mohit7019/lift-please.git
     targetRevision: HEAD
     path: helm/lift-please
     helm:
