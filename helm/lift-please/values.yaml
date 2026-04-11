@@ -1,14 +1,10 @@
-replicaCount: 2
-
 image:
   repository: lift-please
   tag: ""
   pullPolicy: Always
-
 service:
   type: ClusterIP
   port: 3000
-
 ingress:
   enabled: true
   className: "alb"
@@ -16,11 +12,10 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   hosts:
-    - host: lift-please.example.com
-      paths:
-        - path: /
-          pathType: Prefix
-
+  - host: lift-please.example.com
+    paths:
+    - path: /
+      pathType: Prefix
 resources:
   requests:
     cpu: 100m
@@ -28,3 +23,4 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
+replicaCount: 2
