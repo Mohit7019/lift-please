@@ -1,4 +1,6 @@
 apiVersion: v2
 name: lift-please
-description: Lift-Please booking app
+description: Lift-Please app
+type: application
 version: 0.1.0
+appVersion: "1.0.0"
