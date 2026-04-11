@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lift-please
+  namespace: argocd
+spec:
+  project: default
+  
+  source:
+    repoURL: https://github.com/YOUR_USERNAME/lift-please.git
+    targetRevision: HEAD
+    path: helm/lift-please
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: image.repository
+          value: "503668361641.dkr.ecr.us-east-1.amazonaws.com/lift-please"
+        - name: image.tag
+          value: "1840cec04d4a4346fe5bcd383735dd850f727b4f"
+        - name: ingress.hosts[0].host
+          value: "lift-please.example.com"
+        - name: replicaCount
+          value: "2"
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lift-please
+  
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

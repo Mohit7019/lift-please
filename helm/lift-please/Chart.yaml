@@ -1,0 +1,4 @@
+apiVersion: v2
+name: lift-please
+description: Lift-Please booking app
+version: 0.1.0
