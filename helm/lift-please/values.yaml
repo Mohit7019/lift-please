@@ -1,6 +1,6 @@
 image:
   repository: lift-please
-  tag: "v1.0.2"
+  tag: "v1.1.0"
   pullPolicy: Always
 service:
   type: ClusterIP
